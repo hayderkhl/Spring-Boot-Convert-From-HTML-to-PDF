@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport">
+      <meta content="ie=edge" http-equiv="X-UA-Compatible">
+      <title>Spring Boot - Thymeleaf</title>
+</head>
+<body>
+
+      <div>
+            <p >
+            <h1 style="text-align: center;font-size: 35px">
+                  XXXXXX <span style="background-color:red;font-size: 30px;color:white; position: relative;display: inline-block;padding: 8px">TUNISIE</span>
+            </h1>
+            </p>
+      </div>
+      <div>
+            <h1 style="text-align: center;font-size: 16px">
+                  -XXXX-XXXX-XXXXXXX
+            </h1>
+            <p style="text-align: center;color: red;font-size: 16px">
+                  contact@*********.com
+            </p>
+      </div>
+      <br/>
+      <div style="display: flex;position: relative; right:5px">
+            <p><h3 style="position: relative; left: 32px;font-family:SansSerif">Votre Organisation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vous</h3></p>
+            <div style="flex: 1">
+                  <figure style="position: absolute;border: 1px solid black; border-radius: 10px;padding: 12px">
+                        <img style="margin-right: 8px; padding: 5px" height="20px" width="20px" src="src/main/resources/static/iconsfirsto.png" th:text="${name}">
+                        <img style="margin-left: 30px;margin-right: 8px; padding: 5px" height="20px" width="20px" src="src/main/resources/static/iconthird.png" th:text="${name}">
+                        <br/>
+                        <br/>
+                        <img style="margin-right: 15px; padding: 5px" height="20px" width="20px" src="src/main/resources/static/iconsecond.png" th:text="${name}">
+                  </figure>
+            </div>
+
+            <div style="flex: 1">
+                  <figure style="position: absolute;left: 320px;width:280px;margin-top:39px;border: 1px solid black; border-radius: 10px;padding: 12px">
+                        <img style="margin-right: 15px; padding: 5px" height="20px" src="src/main/resources/static/iconfour.png" th:text="${name}">
+                        <br/>
+                        <br/>
+                        <img style="margin-right: 20px; padding: 5px" height="20px" src="src/main/resources/static/iconfifth.png" th:text="${name}">
+                  </figure>
+            </div>
+      </div>
+
+      <div>
+            <p>
+            <h3 style="position: relative; margin-top: 130px;left: 26px;font-family:SansSerif">Votre score de conformité</h3>
+            </p>
+            <div style="display: flex;position: relative; left: 10px">
+
+                  <figure style="position: absolute;right:6px;height:120px;width:580px;margin-top:20px;flex: 1;border: 1px solid black; border-radius: 10px;padding: 25px">
+<!--                        <img style="margin-right: 15px; padding: 15px" width="55px" height="55px" src="src/main/resources/static/iconfour.png">-->
+                        <p style="position:relative;right:25px;font-size: 53px; color: red;margin-right: 8px; padding: 22px;margin-top:20px" th:text="${score}+'%'"></p>
+                        <p style="position: absolute;flex: 1;left:17px;font-size: 15px; color: red;margin-right: 10px;padding-top: 62px; padding: 15px;margin-top:22px">MATURITE</p>
+                        <div style="position: absolute;flex: 1; margin-top:16px; right: 90px">
+                              <p style="text-align: left;position: relative;left: 92px; color: red" th:if="${score &gt;= 90}">&nbsp;Bravo ! Maturité élevée</p>
+                              <p style="text-align: left ;color: red;position: relative;left: 92px;" th:if="${score &lt; 90}">Rome ne s'est pas faite en un jour ! Maturité faible</p>
+                              <p style="text-align: left ; position: relative ; left: 92px" th:if="${score &gt;= 90}">Toutes mes félicitations ! Votre organisation semble avoir un niveau de maturité RGPD élevé.
+                                                                                                                      Découvrons ensemble la manière dont Tunisie XXXXX peut vous aider pour atteindre la perfection !</p>
+                              <p style="text-align: left ; position: relative ; left: 92px" th:if="${score &lt; 90}">Ce diagnostic vous donne un aperçu du travail important qu'il vous reste à accomplir. Mais pas de panique ! Parcourons ensemble le détail de vos résultats ainsi que la manière dont
+                                                                                                                     Tunisie XXXXX peut vous aider pour atteindre une conformité optimale simplement et rapidement !</p>
+
+                        </div>
+                  </figure>
+
+            </div>
+      </div>
+
+      <div>
+                  <p>
+                         <h3 style="position: relative;padding-top: 200px;left: 26px;font-family:SansSerif">Le XXXX & Vous</h3>
+                  </p>
+                         <hr style="border: none;position:relative;left: 25px;border-top: 1px solid black;margin: 20px 0;">
+                  <p style="position: relative;left: 25px">
+                        Il semble que ce soit vous l’heureux en charge de la mission de « responsable du traitement des données personnelles » dans votre organisation. Ne vous n’inquiétez pas, c’est loin d’être une tache difficile.
+                        Tunisie RGPD vous permet d'impliquer les différents services de votre organisation dans le processus de mise en conformité. Grâce à un mode collaboratif intuitif et adapté à tous les niveaux de connaissance
+                        sur le sujet, vous pourrez à la fois déléguer, superviser et surtout gagner en temps et en efficacité. Pour la conformité de votre site internet, vous pouvez par exemple attribuer le traitement d'une action
+                        comme « revoir la conception du bandeau cookie » à la personne en charge du marketing.
+                  </p>
+      </div>
+      <div>
+                  <p>
+                  <h3 style="position: relative;padding-top: 20px;left: 26px">Connaissances de base</h3>
+                  </p>
+                  <hr style="border: none;position:relative;left: 25px; border-top: 1px solid black;margin: 20px 0;width: 680px;">
+                  <p style="position: relative;left: 25px" th:if="${num1 == 5.1}">
+                        Vous avez indiqué que vous avez procédé à la déclaration préalable au traitement des données personnelles auprès de l’INPDP.</p>
+                  <p style="color: red; font-size: 18px;position: relative;left: 25px"  th:if="${num1 == 5.2}" >
+                        Vous avez indiqué que vous n’avez pas procédé à la déclaration préalable au traitement des données personnelles auprès de l’INPDP.</p>
+                  </p>
+                  <br/>
+                  <p style="position: relative;left: 25px">
+                      Cette déclaration est obligatoire conformément à <a href="https://github.com/hayderkhl" target="_blank">l’article 7 </a>l’article 7 de la Loi organique numéro 63 en date du 27 juillet 2004 portant sur la protection des données à caractère personnel.
+                      A défaut, vous risquez d'être sanctionnés un an d'emprisonnement et d'une amende de cinq mille dinars tel que prévu par l’article 90 de la Loi 63-2004.
+
+                      Grâce à Tunisie RGPD, nous vous assistons en amont pour préparer votre dossier de déclaration ainsi que pour tout renouvellement de votre déclaration pour vous permettre légalement de collecter et de traiter des données personnelles quelles que soient celles de vos salariés ou de vos clients. Tunisie XXXX vous accompagne tout au long de la phase de vérification et de rectification éventuelle exigée par l’INPDP.
+                  </p>
+      </div>
+      <div>
+                  <h3 style="position: relative;padding-top: 20px;left: 26px">La collecte des données personnelles</h3>
+                  <hr style="border: none;position:relative;left: 25px; border-top: 1px solid black;margin: 20px 0;width: 680px;">
+                  <p style="position: relative;left: 25px" th:if="${num2 == 7.2 || num2 == 10.1}">D’âpres votre réponse, vous procédez au traitement des données dites « sensibles ». Vous collectez des données personnelles de santé et/ou vous utilisez des moyens de vidéosurveillance dont l’exercice est soumis à une autorisation spéciale de l’INPDP au sens des articles 14 et 69 de la Loi 63-2004. </p>
+                  <p style="position: relative;left: 25px" th:if="${num2 == 8.2}">Vous avez obtenu cette autorisation. A défaut, au sens de l’article 90 de la Loi 63-2004, vous êtes en risque d'un an d'emprisonnement et d'une amende de cinq mille dinars
+                      Si votre activité est actuellement en conformité par rapport à la Loi, il ne faut pas oublier que l’autorisation spéciale doit etre renouvelée chaque fois qu’il s’agit d’une nouvelle opération de la même nature. Cela risque de compliquer la gestion au sein de votre organisation ? Tunisie XXXX a tout prévu pour vous facilitez la tache !
+                  </p>
+                  <p style="position: relative;left: 25px" th:if="${num2 == 8.1 || num2 == 11.1}"> <span style="color: red">Vous n’avez pas obtenu cette autorisation.</span> A défaut, au sens de l’article 90 de la Loi 63-2004, vous êtes en risque d'un an d'emprisonnement et d'une amende de cinq mille dinars
+                  </p>
+      </div>
+      <div>
+                  <h3 style="position: relative;padding-top: 20px;left: 26px">L’effacement et la destruction des données personnelles</h3>
+                  <hr style="border: none;position:relative;left: 25px; border-top: 1px solid black;margin: 20px 0;width: 680px;">
+                  <p style="position: relative;left: 25px" th:if="${num3 == 3.2}">Tout transfert de données à l’étranger est soumis à une autorisation spéciale de l’INPDP conformément à l’article … de la Loi 63-2004.  Vous semblez ne pas avoir cette autorisation de l’INPDP.
+                  </p>
+                  <br/>
+                  <p style="position: relative;left: 25px;color: red">Grâce à Tunisie RGPD, nous vous assistons en amont pour préparer votre dossier de déclaration pour vous permettre légalement de collecter et de traiter des données personnelles quelles que soient celles de vos salariés ou de vos clients. Tunisie RGPD a tout prévu pour vous facilitez la tache !
+                  </p>
+      </div>
+      <div>
+                  <h3 style="position: relative;padding-top: 20px;left: 26px">Le responsable du traitement</h3>
+                  <hr style="border: none;position:relative;left: 25px; border-top: 1px solid black;margin: 20px 0;width: 680px;">
+                  <p style="position: relative;left: 25px" th:if="${num4 ==1.1  && num4 ==2.1 && num4 ==3.1}">Vous semblez confier la responsabilité du traitement des données personnelles à une personne qui répond aux conditions légales exigées par l’article 22 de la Loi 63-2004.
+                  </p>
+                  <p style="position: relative;left: 25px" th:if="${num4 ==1.1  && num4 ==2.2 && num4 ==3.3}">Vous semblez confier la responsabilité du traitement des données personnelles à une personne qui ne répond pas aux conditions légales exigées par l’article 22 de la Loi 63-2004.
+                  </p>
+                  <p style="position: relative;left: 25px">Le responsable du traitement des données personnelles est toute personne physique ou morale qui détermine les finalités et les moyens du traitement des données à caractère personnel.
+                      Tunisie RGPD, peut vous assister pour définir la fiche de fonction du responsable du traitement ainsi que les exigences nécessaires pour identifier un profil interne ou externe approprié.
+                  </p>
+      </div>
+      <div>
+                  <h3 style="position: relative;padding-top: 20px;left: 26px">Le responsable du traitement</h3>
+                  <hr style="border: none;position:relative;left: 25px; border-top: 1px solid black;margin: 20px 0;width: 680px;">
+                  <p style="position: relative;left: 25px">La Loi 63-2004 donne des droits au profit des personnes concernées par la collecte qui représentent des obligations à votre charge dont notamment, le droit au consentement, le droit de rectification, le droit de consultation, le droit d’opposition, le droit d’information, le droit du retrait du consentement et le droit à la destruction.</p>
+                  <br/>
+                  <p style="position: relative;left: 25px">Vous semblez ignorer certains droits que reconnaît la loi aux personnes concernées auprès de vous Si cette méconnaissance est confirmée, vous risquez des sanctions pénales qui peuvent dépasser les 5 ans de prison et les 26 mille dinars comme amende.</p>
+                  <br/>
+                  <p style="position: relative;left: 25px">Tunisie XXXX, vous aide à identifier vos obligations et vous donne les droits nécessaires à être respectées en toute simplicité.</p>
+
+      </div>
+                  <h3 style="position: relative;padding-top: 20px;left: 26px">XXXX & Droits des personnes</h3>
+                  <hr style="border: none;position:relative;left: 25px; border-top: 1px solid black;margin: 20px 0;width: 680px;">
+                  <p style="position: relative;left: 25px">En matière de protection des données personnelles, les personnes concernées (celles dont vous collectez les données) peuvent exercer un certain nombre de droits tels que l'accès, l'opposition, l'effacement, etc.</p>
+                  <br/>
+                  <p style="position: relative;left: 25px"><h3>Avez-vous déjà fait face à ce type de demande et si oui, lesquelles ?</h3>/p>
+                  <br/>
+                  <p style="position: relative;left: 25px">Vous ne semblez pas encore avoir reçu de demandes d'exercice de droits au sens du XXXX? (chanceux !) mais vous n'êtes pas à l'abri d'en recevoir et vous devez vous préparer. Retrouvez avec Tunisie RGPD des modèles de réponses formalisés par nos experts et prêts à être utilisés, ainsi que des guides méthodologiques et des fiches pratiques pour traiter en toute sérénité vos demandes d'exercice de droits.
+                  </p>
+                  <br/>
+                  <p style="position: relative;left: 25px">Si vous avez déjà reçu une demande d’exercice de droit (lorsqu’une personne vous a demandé de rectifier, effacer, mettre à jour… ses informations.) Vous ne savez pas exactement à quoi cela correspond ou quelles sont les conditions d’application de ce droit ? pas de stress, Tunisie RGPD vous explique tout à ce sujet.
+                  </p>
+                  <br/>
+                  <p style="position: relative;left: 25px"><h3>Faisons désormais ensemble un petit bilan de vos pratiques en la matière.</h3></p>
+                  <br/>
+      <div>
+      </div>
+</body>
+</html>
